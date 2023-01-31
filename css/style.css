@@ -21,13 +21,21 @@ header{
     justify-content: space-around;
 }
 
-.navigation{
+.home {
     display: flex;
-    justify-content: space-between;
+    z-index: 100;
+}
+
+.navigation{
     align-items: center;
+    background: #1A1A1A !important;
+    box-shadow: 0 0.1rem 0.5rem var(--red);
+    display: flex;
     height: 9vh;
+    justify-content: space-between;
     padding: 18px 40px;
     position: fixed;
+    transition: all .5s;
     width: 100%;
     z-index: 1;
 }
@@ -169,20 +177,28 @@ header{
     height: 100vh;
 }
 
-.background-about{
+
+.background-about {
     background-color: #222222;
     position: relative;
     height: 43.75rem;
-    left: -25rem;
+    left: -50%;
     top: -1.875rem;
+    z-index: -1;
 }
 
+
 .card-area{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    position: relative;
-    top: -40.625rem;
+    background: var(--white);
+    display: flex;
+    gap: 3em;
+    justify-content: space-around;
+    padding: 10%;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 50% !important;
 }
 
 .card-1, .card-2, .card-3{
@@ -193,9 +209,16 @@ header{
     color: white;
 }
 
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: space-around;
+}
+
 .card-area h4{
-    font-size: 1.875rem;
-    padding: 0.625rem 0;
+    font-size: 1.3em;
 }
 
 .card-area p{
@@ -218,7 +241,7 @@ header{
 .card-area a{
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 10px;
     font-weight: bold;
     letter-spacing: 3px;
 }
